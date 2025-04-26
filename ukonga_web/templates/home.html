@@ -1,0 +1,293 @@
+{% extends 'base.html'%}
+{% load static %}
+
+
+{% block content %}
+<style>
+    .hero{
+        position: relative;
+        background-color: #273F4F;
+        padding: 0.5rem 0.5rem 2rem 0.5rem;
+    }
+    .hero .row .d-flex h2{
+        font-weight: 800;
+        font-size: 2.5rem;
+        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        transform: scale(1, 1.2);
+        letter-spacing: 0.1rem;
+        /* line-height: 5rem; */
+        color: #EEEEEE;
+        text-decoration: underline;
+        text-decoration-thickness: 1px;
+        text-decoration-style: dotted;
+        text-decoration-color: #90CAF9;
+        text-underline-offset: 0.5rem;
+    }
+    .hero .row .d-flex p{
+        color: #ECF0F1;
+        font-size: 1.2rem;
+        text-indent: 1rem;
+    }
+    @media(max-width: 550px){
+        .hero .row .d-flex h2{
+            font-size: 1.4rem;
+        }
+    }
+
+    .hero marquee h3{
+        color: #EEEEEE;
+        font-weight: 400;
+        font-size: small;
+    }
+
+    .wraper-sect-1{
+        padding: 4rem 0.6rem;
+        background-color: #f6f6f6;
+    }
+    .wraper-sect-1 .row{
+        padding: 1.5rem;
+        background-color: #fff;
+        border-radius: 0.8rem;
+        box-shadow: 0 4px 16px rgba(0, 0, 0, 0.1);
+        height: 100%;
+    }
+    .wraper-sect-1 .icon span i{
+        font-size: 6rem;
+        padding-bottom: 1rem;
+        color: #55ACEE;
+        transition: ease-in-out 0.3s;
+    }
+    .wraper-sect-1 .icon h4 a{
+        color: #34465d;
+        text-decoration: none;
+        transition: ease-in-out 0.2s;
+    }
+    .wraper-sect-1 .icon h3 a:hover{
+        color: #55ACEE;
+        text-decoration: none;
+    }
+    .wraper-sect-1 .icon span i:hover{
+        opacity: 0.9;
+        transform: translateY(-10px);
+    }
+
+    .wraper-sect-2{
+        opacity: 0.8;
+        background-image:  linear-gradient(135deg, #d0d0d0 25%, transparent 25%), linear-gradient(225deg, #d0d0d0 25%, transparent 25%), linear-gradient(45deg, #d0d0d0 25%, transparent 25%), linear-gradient(315deg, #d0d0d0 25%, #ffffff 25%);
+        background-position:  4px 0, 4px 0, 0 0, 0 0;
+        background-size: 6px 6px;
+        background-repeat: repeat;
+        padding: 4rem 0rem;
+    }
+    .wraper-sect-2 .latest .latest-post >h1, .latest-video > h1{
+        color: steelblue;
+        text-decoration: underline;
+        text-decoration-thickness: 1px;
+        text-decoration-color: steelblue;
+        text-underline-offset: 10px;
+
+    }
+    .wraper-sect-2 .latest .card{
+        height: 100%;
+        background-color: #fff;
+        border-radius: 0.8rem;
+        box-shadow: 0 4px 16px rgba(0, 0, 0, 0.315);
+        position: relative;
+        overflow: hidden;
+        z-index: 99999;
+    }
+    .post h4 a{
+        color: #34465d;
+    }
+    .post-img{
+        max-height: 250px;
+        margin-bottom: 1rem;
+        border-radius: 0.8rem 0.8rem 0rem 0rem;
+        transition: all 0.4s;
+    }
+    .post-img:hover{
+        transform: scale(1.1);
+
+    }
+    .section-3{
+        background-color: #f6f6f6;
+    }
+</style>
+<section class="hero">
+    <div class="container-fluid">
+        <marquee class="py-2" behavior="alternate" direction="" scrollamount="8" scrolldelay="250"><h3>Specialized Training for QT and Resitters</h3></marquee>
+        <div class="row gy-5 py-4 text-center">
+            <div class="col-lg-6 order-2 order-lg-1 d-flex justify-content-center align-items-center text-center">
+                <div data-aos="fade-in" data-aos-delay="200">
+                    <h2>Unlock Your Academic Potential at Ukonga Skillful Open School</h2>
+                    <br>
+                    <p>Dedicated training programs for QT students and resitters to help you achieve academic excellence and build a successful future.</p>
+                    <!-- <p class="text-start">IT Support & Consultant <br> Web Dev <br> Software Solution </p> -->
+                     <br>
+                    <a class="btn btn-primary ps-4 pe-4 py-2" href="">Enroll Now &nbsp;<i class="bx bx-phone-call"></i></a>
+
+                </div>
+            </div>
+            <div class="col-lg-6 order-1 order-lg-2">
+                <img src="{% static 'images/learn.svg' %}" class="img-fluid" alt="" data-aos="fade-in" data-aos-delay="200">
+            </div>
+
+            
+        </div>
+        <!-- <div class="call-to-action text-center py-2">
+            <a class="btn btn-primary ps-4 pe-4 py-2" href="">Need Help...?, &nbsp;<i class="bx bx-phone-call"></i></a>
+        </div> -->
+    </div>
+</section>
+
+<section class="wraper-sect-1">
+    <div class="container" data-aos="fade-up" data-aos-delay="200">
+        <div class="row justify-content-center text-center gy-4">
+            <h5>We provide specialized education solutions tailored to your needs</h5>
+            <div class="col-lg" data-aos="fade-up" data-aos-delay="200">
+                <div class="icon">
+                    <span><i class='bx bxs-graduation'></i></span>
+                    <h4><a href="{% url 'home' %}">Specialized QT Training</a></h4>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempora, ab.</p>
+                </div>
+            </div>
+            <div class="col-lg">
+                <div class="icon" data-aos="fade-up" data-aos-delay="200">
+                    <span><i class='bx bx-badge-check'></i></span>
+                    <h4><a href="{% url 'home' %}">Resitter Support</a></h4>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Lorem</p>
+                </div>
+            </div>
+            <div class="col-lg">
+                <div class="icon" data-aos="fade-up" data-aos-delay="200">
+                    <span><i class='bx bxl-microsoft-teams'></i></span>
+                    <h4><a href="{% url 'home' %}">Experienced Educators</a></h4>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Sed. lorem10</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="section-2 py-5">
+    <div class="container">
+        <div class="row gy-4">
+            <div class="col-md-6">
+                <div class="image">
+                    <img class="img-fluid rounded" src="{% static 'images/class-photo.avif' %}" alt="">
+                </div>
+            </div>
+            <div class="col-md-6 d-flex justify-content-center align-items-center">
+                <div class="about-ukonga">
+                    <h3 class="text-center mb-3">About Ukonga Skillful Open School</h3>
+                    <p>Founded with a mission to provide quality education to all students, Ukonga Skillful Open School specializes in helping QT students and resitters achieve their academic goals.</p>
+                    <p>Our dedicated team of educators creates a supportive learning environment where students can build confidence, develop skills, and prepare effectively for their examinations.</p>
+                    <div class="row">
+                        <div class="col-6">
+                            <i class='bx bx-list-check'></i> Small class sizes
+                        </div>
+                        <div class="col-6">
+                            <i class='bx bx-list-check'></i> Personalized attention
+                        </div>
+                        <div class="col-6">
+                            <i class='bx bx-list-check'></i> Practical learning
+                        </div>
+                        <div class="col-6">
+                            <i class='bx bx-list-check'></i> Modern facilities
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="section-3 py-5">
+    <div class="container-fluid">
+        <div class="row text-center">
+            <div class="col">
+                <h1>127</h1>
+                <p>QT Students</p>
+            </div>
+            <div class="col">
+                <h1>86</h1>
+                <p>Resitters</p>
+            </div>
+            <div class="col">
+                <h1>18</h1>
+                <p>Couses</p>
+            </div>
+            <div class="col">
+                <h1>11</h1>
+                <p>Trainers</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="section-4 py-5">
+    <div class="container" style="background-color: #fff; border-radius: 0.5rem;">
+        <div class="row">
+            <h2 class="text-center mb-4">Our Program</h2>
+            <div class="col-md-6">
+                <div class="qt-program">
+                    <h4>QT Training Program</h4>
+                    <p>Comprehensive training for Qualifying Test students</p>
+                    <div class="row gy-4">
+                        <div class="col-6">
+                            
+                            <h5><i class='bx bx-list-check'></i> Core Subject Focus</h5>
+                            <small>Intensive training in Mathematics, Science, and Languages</small>
+                        </div>
+                        <div class="col-6">
+                            <h5><i class='bx bx-list-check'></i> Mock Examinations</h5>
+                            <small>Regular practice tests to prepare for the actual QT</small>
+                        </div>                       
+                        <div class="col-6">
+                            <h5><i class='bx bx-list-check'></i>Study Materials</h5>
+                            <small>Comprehensive study guides and resources</small>
+                        </div>                        
+                        <div class="col-6">
+                            <h5><i class='bx bx-list-check'></i> One-on-One Tutoring</h5>
+                            <small>Personalized sessions to address individual challenges</small>
+                        </div>                        
+                        <div class="col-6">
+                            <h5><i class='bx bx-list-check'></i>Another Maybe</h5>
+                            <small>Lorem ipsum dolor sit amet consectetur, adipisicing elit.</small>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-6">
+                <div class="resitter-program">
+                    <h4>Resitter Program</h4>
+                    <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Cumque!</p>
+                    <div class="row gy-4">
+                        <div class="col-6">
+                            
+                            <h5><i class='bx bx-list-check'></i> Core Subject Focus</h5>
+                            <small>Intensive training in Mathematics, Science, and Languages</small>
+                        </div>
+                        <div class="col-6">
+                            <h5><i class='bx bx-list-check'></i> Mock Examinations</h5>
+                            <small>Regular practice tests to prepare for the actual QT</small>
+                        </div>                       
+                        <div class="col-6">
+                            <h5><i class='bx bx-list-check'></i>Study Materials</h5>
+                            <small>Comprehensive study guides and resources</small>
+                        </div>                        
+                        <div class="col-6">
+                            <h5><i class='bx bx-list-check'></i> One-on-One Tutoring</h5>
+                            <small>Personalized sessions to address individual challenges</small>
+                        </div>                        
+                        <div class="col-6">
+                            <h5><i class='bx bx-list-check'></i>Another Maybe</h5>
+                            <small>Lorem ipsum dolor sit amet consectetur, adipisicing elit.</small>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+{% endblock %}
