@@ -6,40 +6,47 @@
 <style>
     .hero{
         position: relative;
-        background-color: #273F4F;
+        background-color: #605678;
         padding: 0.5rem 0.5rem 2rem 0.5rem;
+        border-bottom-left-radius: 1rem;
+        border-bottom-right-radius: 1rem;
     }
     .hero .row .d-flex h2{
         font-weight: 800;
         font-size: 2.5rem;
         font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
         transform: scale(1, 1.2);
-        letter-spacing: 0.1rem;
+        letter-spacing: 0.12rem;
         /* line-height: 5rem; */
         color: #EEEEEE;
-        text-decoration: underline;
+        /* text-decoration: underline;
         text-decoration-thickness: 1px;
         text-decoration-style: dotted;
         text-decoration-color: #90CAF9;
-        text-underline-offset: 0.5rem;
+        text-underline-offset: 0.5rem; */
     }
     .hero .row .d-flex p{
         color: #ECF0F1;
         font-size: 1.2rem;
         text-indent: 1rem;
     }
-    @media(max-width: 550px){
-        .hero .row .d-flex h2{
-            font-size: 1.4rem;
-        }
-    }
-
     .hero marquee h3{
         color: #EEEEEE;
         font-weight: 400;
         font-size: small;
     }
-
+    .hero .mySwiper .swiper-slide img{
+        height: 64vh;
+        border-radius: 0.3rem;
+    }
+    @media(max-width: 550px){
+        .hero .row .d-flex h2{
+            font-size: 1.4rem;
+        }
+        .hero .mySwiper .swiper-slide img{
+            height: 40vh;
+        }
+    }
     .wraper-sect-1{
         padding: 4rem 0.6rem;
         background-color: #f6f6f6;
@@ -54,7 +61,7 @@
     .wraper-sect-1 .icon span i{
         font-size: 6rem;
         padding-bottom: 1rem;
-        color: #55ACEE;
+        color: #605678;
         transition: ease-in-out 0.3s;
     }
     .wraper-sect-1 .icon h4 a{
@@ -70,51 +77,16 @@
         opacity: 0.9;
         transform: translateY(-10px);
     }
-
-    .wraper-sect-2{
-        opacity: 0.8;
-        background-image:  linear-gradient(135deg, #d0d0d0 25%, transparent 25%), linear-gradient(225deg, #d0d0d0 25%, transparent 25%), linear-gradient(45deg, #d0d0d0 25%, transparent 25%), linear-gradient(315deg, #d0d0d0 25%, #ffffff 25%);
-        background-position:  4px 0, 4px 0, 0 0, 0 0;
-        background-size: 6px 6px;
-        background-repeat: repeat;
-        padding: 4rem 0rem;
-    }
-    .wraper-sect-2 .latest .latest-post >h1, .latest-video > h1{
-        color: steelblue;
-        text-decoration: underline;
-        text-decoration-thickness: 1px;
-        text-decoration-color: steelblue;
-        text-underline-offset: 10px;
-
-    }
-    .wraper-sect-2 .latest .card{
-        height: 100%;
-        background-color: #fff;
-        border-radius: 0.8rem;
-        box-shadow: 0 4px 16px rgba(0, 0, 0, 0.315);
-        position: relative;
-        overflow: hidden;
-        z-index: 99999;
-    }
-    .post h4 a{
-        color: #34465d;
-    }
-    .post-img{
-        max-height: 250px;
-        margin-bottom: 1rem;
-        border-radius: 0.8rem 0.8rem 0rem 0rem;
-        transition: all 0.4s;
-    }
-    .post-img:hover{
-        transform: scale(1.1);
-
-    }
     .section-3{
         background-color: #f6f6f6;
     }
+    .section-3 h1{
+        color: #605678;
+        font-weight: bolder;
+    }
 </style>
 <section class="hero">
-    <div class="container-fluid">
+    <div class="container-fluid" data-aos="zoom-in">
         <marquee class="py-2" behavior="alternate" direction="" scrollamount="8" scrolldelay="250"><h3>Specialized Training for QT and Resitters</h3></marquee>
         <div class="row gy-5 py-4 text-center">
             <div class="col-lg-6 order-2 order-lg-1 d-flex justify-content-center align-items-center text-center">
@@ -124,12 +96,37 @@
                     <p>Dedicated training programs for QT students and resitters to help you achieve academic excellence and build a successful future.</p>
                     <!-- <p class="text-start">IT Support & Consultant <br> Web Dev <br> Software Solution </p> -->
                      <br>
-                    <a class="btn btn-primary ps-4 pe-4 py-2" href="">Enroll Now &nbsp;<i class="bx bx-phone-call"></i></a>
+                    <a class="btn btn-warning ps-4 pe-4 py-2" href="">Enroll Now </a>
 
                 </div>
             </div>
             <div class="col-lg-6 order-1 order-lg-2">
-                <img src="{% static 'images/learn.svg' %}" class="img-fluid" alt="" data-aos="fade-in" data-aos-delay="200">
+                <!-- <img src="{% static 'images/image2.jpg' %}" class="img-fluid" alt="" data-aos="fade-in" data-aos-delay="200"> -->
+                <div class="swiper mySwiper ps-4 pe-4">
+                    <div class="swiper-wrapper">
+                      <div class="swiper-slide">
+                        <img class="image-fluid" src="{% static 'images/image2.jpg' %}" alt="">
+                      </div>
+                      <div class="swiper-slide">
+                        <img class="image-fluid" src="{% static 'images/image1.jpg' %}" alt="">
+                      </div>
+                      <div class="swiper-slide">
+                        <img class="image-fluid" src="{% static 'images/image3.jpg' %}" alt="">
+                      </div>
+                      <div class="swiper-slide">
+                        <img class="image-fluid" src="{% static 'images/image4.jpg' %}" alt="">
+                      </div>
+                      <div class="swiper-slide">
+                        <img class="image-fluid" src="{% static 'images/image3.jpg' %}" alt="">
+                      </div>
+                      <div class="swiper-slide">
+                        <img class="image-fluid" src="{% static 'images/image1.jpg' %}" alt="">
+                      </div>
+                    </div>
+                      <!-- Add Navigation Arrows -->
+                    <!-- <div class="swiper-button-next"></div>
+                    <div class="swiper-button-prev"></div> -->
+                  </div>
             </div>
 
             
@@ -160,7 +157,7 @@
             </div>
             <div class="col-lg">
                 <div class="icon" data-aos="fade-up" data-aos-delay="200">
-                    <span><i class='bx bxl-microsoft-teams'></i></span>
+                    <span><i class='bx bxs-group'></i></span>
                     <h4><a href="{% url 'home' %}">Experienced Educators</a></h4>
                     <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Sed. lorem10</p>
                 </div>
@@ -173,27 +170,27 @@
     <div class="container">
         <div class="row gy-4">
             <div class="col-md-6">
-                <div class="image">
-                    <img class="img-fluid rounded" src="{% static 'images/class-photo.avif' %}" alt="">
+                <div class="image" data-aos="zoom-out">
+                    <img class="img-fluid rounded" src="{% static 'images/image1.jpg' %}" alt="">
                 </div>
             </div>
             <div class="col-md-6 d-flex justify-content-center align-items-center">
-                <div class="about-ukonga">
+                <div class="about-ukonga" data-aos="zoom-in">
                     <h3 class="text-center mb-3">About Ukonga Skillful Open School</h3>
                     <p>Founded with a mission to provide quality education to all students, Ukonga Skillful Open School specializes in helping QT students and resitters achieve their academic goals.</p>
                     <p>Our dedicated team of educators creates a supportive learning environment where students can build confidence, develop skills, and prepare effectively for their examinations.</p>
                     <div class="row">
                         <div class="col-6">
-                            <i class='bx bx-list-check'></i> Small class sizes
+                            <i class='bx bxs-chevron-right'></i> Small class sizes
                         </div>
                         <div class="col-6">
-                            <i class='bx bx-list-check'></i> Personalized attention
+                            <i class='bx bxs-chevron-right'></i> Personalized attention
                         </div>
                         <div class="col-6">
-                            <i class='bx bx-list-check'></i> Practical learning
+                            <i class='bx bxs-chevron-right'></i> Practical learning
                         </div>
                         <div class="col-6">
-                            <i class='bx bx-list-check'></i> Modern facilities
+                            <i class='bx bxs-chevron-right'></i> Modern facilities
                         </div>
                     </div>
                 </div>
@@ -203,11 +200,11 @@
 </section>
 
 <section class="section-3 py-5">
-    <div class="container-fluid">
+    <div class="container-fluid" data-aos="zoom-in">
         <div class="row text-center">
             <div class="col">
                 <h1>127</h1>
-                <p>QT Students</p>
+                <p>QT</p>
             </div>
             <div class="col">
                 <h1>86</h1>
@@ -215,7 +212,7 @@
             </div>
             <div class="col">
                 <h1>18</h1>
-                <p>Couses</p>
+                <p>Course</p>
             </div>
             <div class="col">
                 <h1>11</h1>
@@ -226,64 +223,55 @@
 </section>
 
 <section class="section-4 py-5">
-    <div class="container" style="background-color: #fff; border-radius: 0.5rem;">
-        <div class="row">
-            <h2 class="text-center mb-4">Our Program</h2>
+    <div class="container" data-aos="zoom-in" style="background-color: #fff; border-radius: 0.5rem;">
+        <div class="row gy-4">
+            <h2 class="text-center mb-4">Our Programs</h2>
             <div class="col-md-6">
-                <div class="qt-program">
+                <div class="qt-program" data-aos="zoom-in">
                     <h4>QT Training Program</h4>
                     <p>Comprehensive training for Qualifying Test students</p>
                     <div class="row gy-4">
                         <div class="col-6">
-                            
-                            <h5><i class='bx bx-list-check'></i> Core Subject Focus</h5>
+                            <h5><i class='bx bx-right-arrow'></i> Core Subject Focus</h5>
                             <small>Intensive training in Mathematics, Science, and Languages</small>
                         </div>
                         <div class="col-6">
-                            <h5><i class='bx bx-list-check'></i> Mock Examinations</h5>
+                            <h5><i class='bx bx-right-arrow'></i> Mock Examinations</h5>
                             <small>Regular practice tests to prepare for the actual QT</small>
                         </div>                       
                         <div class="col-6">
-                            <h5><i class='bx bx-list-check'></i>Study Materials</h5>
+                            <h5><i class='bx bx-right-arrow'></i>Study Materials</h5>
                             <small>Comprehensive study guides and resources</small>
                         </div>                        
                         <div class="col-6">
-                            <h5><i class='bx bx-list-check'></i> One-on-One Tutoring</h5>
+                            <h5><i class='bx bx-right-arrow'></i> One-on-One Tutoring</h5>
                             <small>Personalized sessions to address individual challenges</small>
                         </div>                        
-                        <div class="col-6">
-                            <h5><i class='bx bx-list-check'></i>Another Maybe</h5>
-                            <small>Lorem ipsum dolor sit amet consectetur, adipisicing elit.</small>
-                        </div>
                     </div>
                 </div>
             </div>
             <div class="col-md-6">
-                <div class="resitter-program">
+                <div class="resitter-program" data-aos="zoom-in">
                     <h4>Resitter Program</h4>
                     <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Cumque!</p>
                     <div class="row gy-4">
                         <div class="col-6">
                             
-                            <h5><i class='bx bx-list-check'></i> Core Subject Focus</h5>
+                            <h5><i class='bx bx-right-arrow'></i> Core Subject Focus</h5>
                             <small>Intensive training in Mathematics, Science, and Languages</small>
                         </div>
                         <div class="col-6">
-                            <h5><i class='bx bx-list-check'></i> Mock Examinations</h5>
+                            <h5><i class='bx bx-right-arrow'></i> Mock Examinations</h5>
                             <small>Regular practice tests to prepare for the actual QT</small>
                         </div>                       
                         <div class="col-6">
-                            <h5><i class='bx bx-list-check'></i>Study Materials</h5>
+                            <h5><i class='bx bx-right-arrow'></i>Study Materials</h5>
                             <small>Comprehensive study guides and resources</small>
                         </div>                        
                         <div class="col-6">
-                            <h5><i class='bx bx-list-check'></i> One-on-One Tutoring</h5>
+                            <h5><i class='bx bx-right-arrow'></i> One-on-One Tutoring</h5>
                             <small>Personalized sessions to address individual challenges</small>
                         </div>                        
-                        <div class="col-6">
-                            <h5><i class='bx bx-list-check'></i>Another Maybe</h5>
-                            <small>Lorem ipsum dolor sit amet consectetur, adipisicing elit.</small>
-                        </div>
                     </div>
                 </div>
             </div>
